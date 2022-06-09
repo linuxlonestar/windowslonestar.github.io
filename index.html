@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>windows lonestar</title>
+  </head>
+  <body>
+    <!--This draws the canvas on the webpage -->
+    <canvas id="mycanvas"></canvas>
+    <div class="row">
+      <a href="https://3i4y5.csb.app/">
+        <img src="winxp.png" alt="lonestar"
+      </a>
+    </div>
+    <a href="https://3i4y5.csb.app/old.html">Old versions</a>
+  </body>
+
+  <!-- Include the processing.js library -->
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+  <script>
+    var programCode = function (processingInstance) {
+      with (processingInstance) {
+        size(800, 400);
+        frameRate(50);
+
+        // Paste code from Khan Academy here:
+        background(47, 255, 0);
+        fill(255, 0, 0);
+        textSize(20);
+        text(
+          "Welcome to windows lonestar! I code things. to return to the homepage from any website,",
+          0,
+          20
+        );
+        text("press the lonestar button.", 0, 40);
+        fill(0, 115, 255);
+        rect(60, 100, 160, 110);
+        fill(255, 255, 255);
+        textSize(20);
+        text("Five Nights At BLMS", 70, 140, 150, 50);
+        fill(0, 115, 255);
+        rect(300, 100, 160, 110);
+        fill(255, 255, 255);
+        text("HTML games", 320, 160);
+        fill(0, 115, 255);
+        rect(60, 250, 160, 110);
+        fill(255, 255, 255);
+        text("Shue Games", 80, 310);
+        fill(0, 115, 255);
+        rect(300, 250, 160, 110);
+        fill(255, 255, 255);
+        text("Source code", 325, 310);
+        fill(0, 115, 255);
+        rect(540, 100, 160, 110);
+        fill(255, 255, 255);
+        textSize(20);
+        text("LonestarOS", 550, 160);
+        fill(0, 115, 255);
+        rect(540, 250, 160, 110);
+        fill(255, 255, 255);
+        textSize(19);
+        text("LoneBrowser", 565, 310);
+        fill(255, 0, 0);
+        textSize(11);
+        text("version 2.3.1", 730, 395);
+        mousePressed = function () {
+          if (
+            mousePressed &&
+            mouseX > 60 &&
+            mouseX < 220 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://3i4y5.csb.app//no.html");
+          } else if (
+            mousePressed &&
+            mouseX > 300 &&
+            mouseX < 460 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://3tsyw.csb.app/");
+          } else if (
+            mousePressed &&
+            mouseX > 60 &&
+            mouseX < 220 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://3i4y5.csb.app/sgames.html");
+          } else if (
+            mousePressed &&
+            mouseX > 540 &&
+            mouseX < 700 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://3i4y5.csb.app//os.html");
+          } else if (
+            mousePressed &&
+            mouseX > 300 &&
+            mouseX < 460 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://github.com/WindowsLonestar/WLShomepage-source");
+          } else if (
+            mousePressed &&
+            mouseX > 540 &&
+            mouseX < 700 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://3i4y5.csb.app//whywls.html");
+          }
+        };
+      }
+    };
+
+    // Get the canvas that ProcessingJS will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function to ProcessingJS constructor
+    var processingInstance = new Processing(canvas, programCode);
+  </script>
+</html>
