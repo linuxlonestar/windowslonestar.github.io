@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WLS HTML games</title>
+  </head>
+  <body>
+    <!--This draws the canvas on the webpage -->
+    <canvas id="mycanvas"></canvas>
+    <div class="row">
+      <a href="https://windowslonestar.github.io/">
+        <img src="winxp.png" alt="lonestar"
+      </a>
+    </div>
+  </body>
+
+  <!-- Include the processing.js library -->
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+  <script>
+    var programCode = function (processingInstance) {
+      with (processingInstance) {
+        size(800, 400);
+        frameRate(50);
+
+        // Paste code from Khan Academy here:
+        background(47, 255, 0);
+        fill(47, 255, 0);
+        fill(255, 0, 0);
+        textSize(20);
+        text("Here's some games!", 0, 20);
+        fill(0, 115, 255);
+        rect(60, 100, 160, 110);
+        fill(255, 255, 255);
+        textSize(20);
+        text("Tetris", 70, 160);
+        fill(0, 115, 255);
+        rect(300, 100, 160, 110);
+        fill(255, 255, 255);
+        text("pong", 320, 160);
+        fill(0, 115, 255);
+        rect(60, 250, 160, 110);
+        fill(255, 255, 255);
+        text("breakout", 90, 310);
+        fill(0, 115, 255);
+        rect(300, 250, 160, 110);
+        fill(255, 255, 255);
+        text("snake", 325, 310);
+        fill(0, 115, 255);
+        rect(540, 100, 160, 110);
+        fill(255, 255, 255);
+        textSize(20);
+        text("frogger", 550, 160);
+        fill(0, 115, 255);
+        rect(540, 250, 160, 110);
+        fill(255, 255, 255);
+        text("Play dos games", 550, 310);
+        // version text
+        fill(255, 0, 0);
+        textSize(11);
+        text("version 2.2.0", 730, 395);
+        mousePressed = function () {
+          if (
+            mousePressed &&
+            mouseX > 60 &&
+            mouseX < 220 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://tetris.toddj.repl.co");
+          } else if (
+            mousePressed &&
+            mouseX > 300 &&
+            mouseX < 460 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://pong.toddj.repl.co");
+          } else if (
+            mousePressed &&
+            mouseX > 60 &&
+            mouseX < 220 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://breakout.toddj.repl.co");
+          } else if (
+            mousePressed &&
+            mouseX > 300 &&
+            mouseX < 460 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://snake.toddj.repl.co");
+          } else if (
+            mousePressed &&
+            mouseX > 540 &&
+            mouseX < 700 &&
+            mouseY > 250 &&
+            mouseY < 360
+          ) {
+            link("https://archive.org/details/softwarelibrary_msdos_games");
+          } else if (
+            mousePressed &&
+            mouseX > 540 &&
+            mouseX < 700 &&
+            mouseY > 100 &&
+            mouseY < 210
+          ) {
+            link("https://frogger.toddj.repl.co");
+          }
+        };
+      }
+    };
+
+    // Get the canvas that ProcessingJS will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function to ProcessingJS constructor
+    var processingInstance = new Processing(canvas, programCode);
+  </script>
+</html>
